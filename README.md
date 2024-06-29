@@ -26,9 +26,7 @@ Predicting currency prices is like trying to predict the weather 🌦️—it's 
 
 ## **Table of Contents:**
 
-1. Introduction
-   - Overview of the research
-   - Purpose and significance
+1. [Introduction](https://github.com/aditya-saxena-7/Dynamic-Beta-Variability-in-Foreign-Exchange-Returns-Using-Instrumented-PCA/blob/main/Introduction.md)
 
 2. Abstract
    - Summary of findings

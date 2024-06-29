@@ -28,47 +28,17 @@ Predicting currency prices is like trying to predict the weather 🌦️—it's 
 
 1. [Introduction](https://github.com/aditya-saxena-7/Dynamic-Beta-Variability-in-Foreign-Exchange-Returns-Using-Instrumented-PCA/blob/main/Introduction.md)
 
-2. Abstract
-   - Summary of findings
+2. [Methodology](https://github.com/aditya-saxena-7/Dynamic-Beta-Variability-in-Foreign-Exchange-Returns-Using-Instrumented-PCA/blob/main/Methodology.md)
 
-3. Key Terminologies
-   - Explanation of important concepts
+3. [Data and Preliminary Findings](https://github.com/aditya-saxena-7/Dynamic-Beta-Variability-in-Foreign-Exchange-Returns-Using-Instrumented-PCA/blob/main/Data%20and%20Preliminary%20Findings.md)
 
-4. Section 1: Introduction to Foreign Exchange Markets
-   - What is the foreign exchange market?
-   - Importance of predicting exchange rates
+4. [Empirical Findings](https://github.com/aditya-saxena-7/Dynamic-Beta-Variability-in-Foreign-Exchange-Returns-Using-Instrumented-PCA/blob/main/Empirical%20Findings.md)
 
-5. Section 2: Traditional Prediction Methods
-   - How beta coefficients were traditionally used
-   - Limitations of old methods
+5. [Interpreting IPCA Factors](https://github.com/aditya-saxena-7/Dynamic-Beta-Variability-in-Foreign-Exchange-Returns-Using-Instrumented-PCA/blob/main/Interpreting%20IPCA%20Factors.md)
 
-6. Section 3: Introducing IPCA
-   - What is IPCA?
-   - How IPCA works
+6. [Robustness and discussions](https://github.com/aditya-saxena-7/Dynamic-Beta-Variability-in-Foreign-Exchange-Returns-Using-Instrumented-PCA/blob/main/Robustness%20and%20discussions.md)
 
-7. Section 4: Data Collection
-   - Sources of data
-   - Types of data used
-
-8. Section 5: Empirical Findings
-   - How IPCA performed compared to traditional methods
-   - Key results and their significance
-
-9. Section 6: Understanding the Results
-   - Importance of medium-term interest rates
-   - Role of stock market momentum
-   - Impact of idiosyncratic volatility
-
-10. Section 7: Practical Implications
-    - How these findings can be used in real-world trading
-    - Benefits for investors and financial analysts
-
-11. Conclusion
-    - Summary of key points
-    - Future directions for research
-
-12. References
-    - Sources and further reading
+7. [Conclusion](https://github.com/aditya-saxena-7/Dynamic-Beta-Variability-in-Foreign-Exchange-Returns-Using-Instrumented-PCA/blob/main/Conclusion.md)
 
 ---
 

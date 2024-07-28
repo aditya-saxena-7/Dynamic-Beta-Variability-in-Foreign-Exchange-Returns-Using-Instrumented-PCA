@@ -75,6 +75,61 @@ To tackle this problem, we used a method called Instrumented Principal Component
 
 We collected data on exchange rates and various economic factors from G10 countries (Australia, Canada, Switzerland, Denmark, Euro Area, UK, Japan, Norway, New Zealand, and Sweden) from January 2008 to December 2020. This gives us a broad and diverse dataset to work with.
 
+**Currencies from G10 Countries 🌐:**
+The G10 countries are:
+- Australia 🇦🇺
+- Canada 🇨🇦
+- Switzerland 🇨🇭
+- Denmark 🇩🇰
+- Euro Area 🇪🇺
+- United Kingdom 🇬🇧
+- Japan 🇯🇵
+- Norway 🇳🇴
+- New Zealand 🇳🇿
+- Sweden 🇸🇪
+
+**Variables and Their Definitions 📋:**
+
+1. **Inflation Differential (INFi,t) 📈🔄**: 
+   - **Definition**: The difference in inflation rates between a country and the US.
+   - **Example**: If the inflation rate in the US is 2% and in Canada it's 3%, the inflation differential is 1%. Higher inflation in a country typically weakens its currency.
+
+2. **Unemployment Rate Gap Differential (UNi,t) 💼📉**:
+   - **Definition**: The difference in the unemployment rate gap (cyclical component) between a country and the US.
+   - **Example**: If the unemployment rate in the US is 5% and in Japan it's 4%, and considering economic cycles, the differential helps understand economic health.
+
+3. **Bill Yield Differential (BILLi,t) 📈📊**:
+   - **Definition**: The difference in short-term interest rates (three-month government bills) between a country and the US.
+   - **Example**: If short-term interest rates are higher in the US than in Canada, it can make US investments more attractive, affecting currency values.
+
+4. **Note Yield Differential (NOTEi,t) 📈📝**:
+   - **Definition**: The difference in medium-term interest rates (five-year government debt) between a country and the US.
+   - **Example**: If the five-year interest rate in the UK is higher than in the US, it might attract more investments to the UK, strengthening the pound.
+
+5. **Bond Yield Differential (BONDi,t) 📈💵**:
+   - **Definition**: The difference in long-term interest rates (ten-year government bonds) between a country and the US.
+   - **Example**: Higher long-term interest rates in a country can attract long-term investments, affecting its currency value.
+
+6. **Dividend Yield Differential (DPi,t) 💰📊**:
+   - **Definition**: The difference in dividend yields (returns from stocks) between a country and the US.
+   - **Example**: If stocks in Australia offer higher dividends than US stocks, investors might prefer Australian stocks, affecting the Australian dollar.
+
+7. **Price-Earnings Differential (PEi,t) 📈💼**:
+   - **Definition**: The difference in price-earnings ratios (valuation of stocks) between a country and the US.
+   - **Example**: If stocks in Europe are cheaper relative to their earnings compared to US stocks, it might attract investments to Europe, influencing the euro.
+
+8. **Stock Market Momentum Differential (SRET12i,t) 📈📉**:
+   - **Definition**: The difference in the 12-month cumulative returns of stock indices between a country and the US.
+   - **Example**: If Japanese stocks have been performing better than US stocks over the past year, it could strengthen the yen.
+
+9. **Idiosyncratic Volatility (IVi,t) 📉🔄**:
+   - **Definition**: The unique, unpredictable changes in the market that affect currency values.
+   - **Example**: Unexpected political events in Canada can cause unpredictable changes in the Canadian dollar.
+
+10. **Idiosyncratic Skewness (ISi,t) 📉🌀**:
+    - **Definition**: The skewness (asymmetry) in the distribution of currency returns.
+    - **Example**: If the returns on the Swiss franc tend to be more positive or negative in an unexpected way, it reflects in the skewness.
+
 **Key Findings 🔍**
 
 1. **Interest Rate Differential**: The difference in interest rates between two countries over a medium period is a crucial factor.
@@ -257,3 +312,25 @@ Let's walk through a simplified example using interest rate differentials:
      r_{\text{EUR},t+1} = z_{\text{EUR},t}^\top \Gamma_\alpha + z_{\text{EUR},t}^\top \Gamma_\beta f_{t+1} + \epsilon^*_{\text{EUR},t+1}
      \]
    - This combined model now accounts for changing economic conditions and their impact on the Euro's returns.
+
+**Comparing In-Sample and Out-of-Sample Performance 📊🔄**
+
+- **PCA vs. IPCA**: PCA might look better during training (higher Total R²) but doesn’t predict future returns well (negative Predictive R²). IPCA, on the other hand, balances fitting historical data and predicting future returns better.
+  
+- **Example**: If you have two cookie recipes, PCA might be great for your initial batch (training), but when you try it on new ingredients (testing), it fails. IPCA, while not perfect in the initial batch, performs better with new ingredients.
+
+#### 4.3 Economic Significance Based on the IPCA Predictions 💼📈
+
+**Trading Strategies Based on Predictions 📊💹**
+
+- **Definition**: We use the predicted returns from the IPCA model to create trading strategies. If the model predicts a currency will go up, we buy that currency (long position). If it predicts a drop, we sell that currency (short position).
+- 
+- **Example**: If the IPCA model predicts the euro will rise, we buy euros. If it predicts the yen will fall, we sell yen.
+  
+- **Findings**: The IPCA model generally outperforms PCA in both full-sample and out-of-sample periods, meaning it provides better trading signals.
+
+**Portfolio Performance 📈📉**
+
+- **Equally-Weighted Portfolio**: We create a portfolio by equally weighting the returns of all ten currencies.
+  
+- **Findings**: The IPCA model yields better returns than PCA. While PCA might show some good fits during training, it doesn't translate to actual economic gains when tested with new data.

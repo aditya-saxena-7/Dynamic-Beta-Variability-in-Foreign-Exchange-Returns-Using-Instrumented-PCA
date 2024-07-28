@@ -225,10 +225,22 @@ The IPCA algorithm involves the following steps:
    - Evaluate the model's performance using in-sample and out-of-sample tests.
    - Compare the predictive power of the IPCA model with benchmarks like the random walk model and traditional PCA.
 
-#### 3.2 Key Findings
+#### 3.2 Key Findings: Interpreting IPCA Factors 📊🔍
 
-- **Out-of-Sample Predictability**: IPCA outperforms the random walk and PCA models in terms of out-of-sample predictability, indicating its robustness in capturing time-varying risk premiums.
-- **Significance of Instrumental Variables**: The study finds that interest rate differentials, stock market momentum, and idiosyncratic volatility are significant predictors of FX returns, confirming the effectiveness of the chosen instruments.
+1. **Note Yield (Medium-Term Interest Rates) 📝📈**:
+   - **Definition**: The yield or return on government debt with a medium-term maturity (e.g., five years).
+   - **Importance**: This characteristic is highly significant in predicting currency returns.
+   - **Example**: If the five-year interest rate in the UK is higher than in the US, it can attract more investments to the UK, strengthening the pound.
+
+2. **Idiosyncratic Volatility (Unique Market Movements) 🌀📉**:
+   - **Definition**: The unique, unpredictable changes in the market that affect currency values.
+   - **Importance**: High significance in explaining currency returns.
+   - **Example**: Unexpected political events in Canada can cause unpredictable changes in the Canadian dollar.
+
+3. **Stock Market Momentum (12-Month Stock Returns) 📈📉**:
+   - **Definition**: The trend or direction in which the stock market is moving over the past 12 months.
+   - **Importance**: Significant in influencing currency returns.
+   - **Example**: If Japanese stocks have been performing well over the past year, it could strengthen the yen.
 
 ### 4. Practical Implementation of IPCA in Python (Contextual Example)
 Below is a practical example of implementing the IPCA algorithm in Python, contextualized for the research paper's FX returns analysis:

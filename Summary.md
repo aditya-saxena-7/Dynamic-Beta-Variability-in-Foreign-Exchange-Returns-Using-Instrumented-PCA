@@ -34,18 +34,6 @@ In finance, this means IPCA can better account for how economic indicators (like
 
 5. **Idiosyncratic Volatility:** Unique, unpredictable changes in the market that can affect currency prices 🌀.
 
-| **Feature**                          | **PCA (Principal Component Analysis)**                                                                                      | **IPCA (Instrumented Principal Component Analysis)**                                                                     |
-|--------------------------------------|----------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------|
-| **Purpose**                          | Reduce the dimensionality of data by transforming it into a set of uncorrelated variables called principal components.       | Reduce dimensionality while also accounting for the changing relationships between variables over time.                   |
-| **Method**                           | Identifies principal components based on the variance in the data without considering external instruments.                  | Identifies principal components by using instruments (additional variables) that help explain changes in the primary data. |
-| **Beta Coefficients (Sensitivity)**  | Assumes beta coefficients (sensitivities) are constant over time.                                                           | Allows beta coefficients to change over time based on the instruments.                                                    |
-| **Dynamic Capability**               | Static; does not adapt to changes in data relationships over time.                                                          | Dynamic; adapts to changes in data relationships over time, making it more flexible.                                      |
-| **Data Usage**                       | Uses only the primary data set to identify principal components.                                                            | Uses both the primary data set and additional instruments to identify principal components.                               |
-| **Example**                          | **PCA**: If we analyze a dataset of various fruit weights (apples, oranges, bananas), PCA would identify the main patterns in weight variance without considering seasonal changes or external factors. | **IPCA**: If we analyze the same fruit dataset, IPCA would consider external factors like seasonal weather conditions (instruments) that affect fruit weight, allowing for better understanding of how weights change over time. |
-| **Application in Finance**           | **PCA**: Used to identify key factors driving market returns but assumes these factors remain constant.                     | **IPCA**: Used to identify key factors driving market returns while allowing these factors to change over time based on economic indicators (instruments). |
-| **Predictive Power**                 | Good at explaining historical data but may not perform well in predicting future changes if relationships between variables change. | Better at predicting future changes due to its ability to adapt to evolving relationships between variables.             |
-| **Example in Finance**               | **PCA**: Analyzing stock returns without considering time-varying factors like changing interest rates or economic policies. | **IPCA**: Analyzing stock returns while considering time-varying factors such as changes in interest rates or economic policies, providing a more accurate prediction of future returns. |
-
 ### Objective:
 
 The foreign exchange (FX) market is where different currencies are traded. Imagine you're traveling from the USA to Europe and need to exchange your dollars for euros. The rate at which you exchange these currencies is determined in the FX market. 
@@ -83,8 +71,48 @@ To tackle this problem, we used a method called Instrumented Principal Component
 - **Beta Coefficients**: These numbers tell us how much an FX rate will change in response to changes in other factors (like interest rates or economic growth). In traditional models, these were assumed to be constant, but we found that they actually vary over time.
 - **Time-Varying Betas**: By allowing betas to change, our model can adapt to different economic conditions, leading to more accurate predictions.
 
+**Data Collection 📅📈**
+
+We collected data on exchange rates and various economic factors from G10 countries (Australia, Canada, Switzerland, Denmark, Euro Area, UK, Japan, Norway, New Zealand, and Sweden) from January 2008 to December 2020. This gives us a broad and diverse dataset to work with.
+
 **Key Findings 🔍**
 
 1. **Interest Rate Differential**: The difference in interest rates between two countries over a medium period is a crucial factor.
 2. **Stock Market Momentum**: Trends in the stock market also play a significant role.
 3. **Idiosyncratic Volatility**: Unique, unpredictable changes in the market impact FX rates.
+
+**Overview of Instrumented Principal Component Analysis (IPCA) 🧩**
+
+(Add link here about PCA vs IPCA)
+
+**Factor Model for Currency Returns 💹**
+
+In finance, a **factor model** is used to explain the returns (profits or losses) on investments based on various factors. For example, factors might include things like interest rates, inflation, or stock market performance. 
+
+**Key Components of Our Model 🔑**
+
+**1. Currency Return (ri,t+1) 💵➡️📈**
+- **Definition**: Currency return refers to how much the value of a currency changes over a specific period.
+- **Example**: Imagine you invest in euros (EUR) at the start of the month. By the end of the month, the value of the euros you hold has increased by 2%. This 2% change is the currency return.
+
+**2. Beta Coefficients (βi,t) 📈➡️💵**
+- **Definition**: Beta coefficients are numbers that measure the sensitivity of the currency return to changes in underlying factors. Think of them as "sensitivity dials" that adjust how strongly different factors affect the currency return.
+- **Example**: If the beta coefficient for interest rates (one of the factors) is 0.5, it means that for every 1% change in interest rates, the currency return changes by 0.5%. If the interest rate increases by 2%, the currency return would increase by 1% (0.5 * 2%).
+
+**3. Latent Factors (ft+1) 🔍**
+- **Definition**: Latent factors are hidden or underlying variables that influence currency returns. These factors are not directly observed but can be inferred from the data.
+- **Example**: Some latent factors might include economic growth, geopolitical events, or changes in investor sentiment. For instance, if there's a major geopolitical event, it might affect currency values, even though the exact impact (latent factor) isn't directly measured.
+
+**4. Error Term (ϵi,t+1) ❌**
+- **Definition**: The error term represents the part of the currency return that cannot be explained by the model. It's the "noise" or random fluctuations that are unpredictable.
+- **Example**: If you predicted the currency return to be 2%, but it actually turns out to be 2.5%, the extra 0.5% is the error term. This could be due to random market movements or unexpected news.
+
+**Dynamic Factor Loadings 🔄**
+
+In traditional models, beta coefficients are assumed to be constant, like fixed dials on a machine. However, in reality, these coefficients can change over time based on economic conditions. Our model allows these "volume knobs" (beta coefficients) to move up and down as conditions change, making our predictions more accurate.
+
+**Country Characteristics as Instruments 🌍📊**
+
+We use specific characteristics of countries (like interest rates, inflation rates, etc.) as instruments to help our model. 
+
+(Add Math IPCA)

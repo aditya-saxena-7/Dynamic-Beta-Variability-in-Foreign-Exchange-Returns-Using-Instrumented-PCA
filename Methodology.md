@@ -95,7 +95,7 @@ Alternating Least Squares is a method used to estimate the parameters (like beta
 4. **Iterate ♻️**: Repeat these steps, alternating between optimizing the beta coefficients and the latent factors, until the changes are very small, meaning you've found the best fit.
    - **Example**: Keep refining the beta coefficients and latent factors back and forth until your predictions for currency returns are as close as possible to the actual returns over multiple iterations.
 
-Sure! Here's a detailed breakdown of Module 2: Introduction to Instrumental Variables (IV):
+Here's a detailed breakdown of Module 2: Introduction to Instrumental Variables (IV):
 
 ---
 

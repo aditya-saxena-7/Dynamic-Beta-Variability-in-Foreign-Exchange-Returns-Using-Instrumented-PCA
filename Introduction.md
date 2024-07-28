@@ -43,10 +43,6 @@ Imagine a company that imports goods from different countries. If the company ca
 2. **Stock Market Momentum**: Trends in the stock market also play a significant role.
 3. **Idiosyncratic Volatility**: Unique, unpredictable changes in the market impact FX rates.
 
-**Conclusion 🎯**
-
-By using IPCA, we can make better predictions about how FX rates will change. This is valuable for traders, businesses, and policymakers. Our research not only improves the accuracy of FX rate predictions but also helps us understand the underlying economic factors that drive these changes.
-
 ## **Table of Contents:**
 
 1. [Introduction](https://github.com/aditya-saxena-7/Dynamic-Beta-Variability-in-Foreign-Exchange-Returns-Using-Instrumented-PCA/blob/main/Introduction.md)

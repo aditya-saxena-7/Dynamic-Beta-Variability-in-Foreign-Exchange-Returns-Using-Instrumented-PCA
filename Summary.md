@@ -346,3 +346,42 @@ Let's walk through a simplified example using interest rate differentials:
 - **Equally-Weighted Portfolio**: We create a portfolio by equally weighting the returns of all ten currencies.
   
 - **Findings**: The IPCA model yields better returns than PCA. While PCA might show some good fits during training, it doesn't translate to actual economic gains when tested with new data.
+
+#### 6.2 Limitations of Our Study 📉⚖️
+
+While our study presents promising results, it’s essential to acknowledge its limitations. Here are some key limitations and their implications:
+
+**Key Limitations and Their Explanations 📋:**
+
+1. **Model Assumptions 📊🔄**:
+   - **Definition**: Our model makes several assumptions about the factors affecting currency returns and their relationships.
+   - **Example**: We assume that certain economic indicators like interest rates and stock market momentum are the primary drivers of currency returns.
+
+2. **Data Limitations 📅📉**:
+   - **Definition**: The quality and availability of data can affect the accuracy of our model.
+   - **Example**: We use data from 2008 to 2020, but changes in data collection methods or missing data points can impact our findings.
+
+3. **Market Conditions 🌍📉**:
+   - **Definition**: The model's performance may vary under different market conditions.
+   - **Example**: The model might perform well during stable economic periods but may not predict accurately during extreme market volatility, like the 2008 Financial Crisis.
+
+4. **Out-of-Sample Performance 🔮📊**:
+   - **Definition**: While our model shows good out-of-sample performance, it’s based on historical data and may not guarantee future performance.
+   - **Example**: Economic events not reflected in the historical data, like future pandemics or geopolitical shifts, can impact model accuracy.
+
+**Discussion on Limitations 🔍💬:**
+
+**Understanding the Impact 📉**:
+- **Assumptions**: Acknowledging that our model's assumptions might oversimplify the real-world complexities.
+- **Example**: Assuming interest rates alone drive currency returns might miss other important factors like political stability or technological advancements.
+
+**Data and Market Conditions 📊**:
+- **Data Quality**: Emphasizing the need for high-quality, comprehensive data for more accurate predictions.
+- **Example**: Better data collection methods and access to more recent data can improve model reliability.
+
+**Future Research Directions 🔬🔮**:
+- **Improving Models**: Suggesting ways to refine the model by incorporating more diverse factors or using more sophisticated techniques.
+- **Example**: Including factors like consumer sentiment or global trade dynamics in future models.
+
+**Real-World Example 🌐:**
+- **Investment Strategy**: While our model provides useful insights, investors should be aware of its limitations and complement it with other analyses and market intelligence.
